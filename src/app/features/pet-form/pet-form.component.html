@@ -1,0 +1,32 @@
+<div class="pet-form">
+  <form [formGroup]="petForm" (ngSubmit)="onSubmit()">
+    <label>Nome do Dono</label>
+    <input formControlName="ownerName" placeholder="Nome do dono" />
+    <p *ngIf="petForm.get('ownerName')?.invalid && petForm.get('ownerName')?.touched">
+      Nome do dono é obrigatório.
+    </p>
+
+    <label>Nome do Pet</label>
+    <input formControlName="petName" placeholder="Nome do pet" />
+    <p *ngIf="petForm.get('petName')?.invalid && petForm.get('petName')?.touched">
+      Nome do pet é obrigatório.
+    </p>
+
+    <label>Raça do Pet</label>
+    <input formControlName="breed" placeholder="Raça do pet" />
+    <p *ngIf="petForm.get('breed')?.invalid && petForm.get('breed')?.touched">
+      Raça do pet é obrigatória.
+    </p>
+
+    <label>Serviço Escolhido</label>
+    <input formControlName="service" placeholder="Serviço escolhido" />
+    <p *ngIf="petForm.get('service')?.invalid && petForm.get('service')?.touched">
+      Serviço escolhido é obrigatório.
+    </p>
+
+    <button type="submit" [disabled]="petForm.invalid">
+      {{ isEditing ? 'Salvar Alterações' : 'Salvar' }}
+    </button>
+    <button type="button" (click)="onCancel()">Cancelar</button>
+  </form>
+</div>

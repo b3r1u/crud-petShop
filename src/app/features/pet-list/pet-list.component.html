@@ -1,0 +1,27 @@
+<div class="pet-list">
+  <app-pet-form [petToEdit]="petToEdit" (petSaved)="onPetSaved()"></app-pet-form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome do Dono</th>
+        <th>Nome do Pet</th>
+        <th>Raça</th>
+        <th>Serviço</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pet of pets">
+        <td>{{ pet.ownerName }}</td>
+        <td>{{ pet.petName }}</td>
+        <td>{{ pet.breed }}</td>
+        <td>{{ pet.service }}</td>
+        <td>
+          <button (click)="editPet(pet)">Editar</button>
+          <button (click)="deletePet(pet.id)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

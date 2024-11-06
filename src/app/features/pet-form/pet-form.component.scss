@@ -1,0 +1,64 @@
+.pet-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.pet-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pet-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.pet-form p {
+  color: red;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.pet-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.pet-form button:disabled {
+  background-color: #ccc;
+}
+
+.pet-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.pet-form button[type="button"] {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.pet-form button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
